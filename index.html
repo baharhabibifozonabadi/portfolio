@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bahar Habibi Fozonabadi - Theatre artist, writer, and researcher. I study drama, language, and cognition while creating original plays and interdisciplinary projects that combine artistic practice with scientific research.">
+    <title>Bahar Habibi Fozonabadi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Bahar</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="navHome">Home</a></li>
+                <li><a href="#about" class="nav-link" data-translate="navAbout">About</a></li>
+                <li><a href="#projects" class="nav-link" data-translate="navProjects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-translate="navContact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">FR</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-translate="heroTitle">Bahar Habibi</h1>
+            <p class="hero-subtitle" data-translate="heroSubtitle">Theatre artist, writer, and researcher</p>
+            <p class="hero-description" data-translate="heroDescription">
+                I study drama, language, and cognition while creating original plays and interdisciplinary projects that
+                combine artistic practice with scientific research.
+            </p>
+        </div>
+        <div class="hero-image">
+            <img src="image_herosection.png" alt="Bahar">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-content">
+                    <h2 class="section-title" data-translate="aboutTitle">About Me</h2>
+                    <div class="about-text">
+                        <p data-translate="aboutText1">
+                            I am <strong>Bahar Habibi Fozonabadi</strong>, a theatre artist, writer, and researcher. I
+                            study drama, language, and cognition while creating original plays and interdisciplinary
+                            projects that combine artistic practice with scientific research.
+                        </p>
+                        <p data-translate="aboutText2">
+                            My work spans theater and performing arts, research in psychology, programming and software
+                            development, as well as interdisciplinary research that connects these fields. I believe
+                            that the intersection of art and science creates unique opportunities for understanding
+                            human experience and cognition.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="specialties">
+        <div class="container">
+            <div class="specialties-header">
+                <h2 class="section-title" data-translate="projectsTitle">My Projects</h2>
+                <p class="section-subtitle" data-translate="projectsSubtitle">Explore my work across different
+                    disciplines</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <a href="stories.html" class="carousel-slide">
+                            <div class="slide-number">01</div>
+                            <h3 data-translate="stories">Theatrical Works & Stories</h3>
+                            <p data-translate="storiesDesc">Narrative works and theatrical performances</p>
+                            <span class="slide-link" data-translate="viewWork">View work →</span>
+                        </a>
+                        <a href="essays.html" class="carousel-slide">
+                            <div class="slide-number">02</div>
+                            <h3 data-translate="essays">Essays and Translations</h3>
+                            <p data-translate="essaysDesc">Written works and translation projects</p>
+                            <span class="slide-link" data-translate="viewWork">View work →</span>
+                        </a>
+                        <a href="programming.html" class="carousel-slide">
+                            <div class="slide-number">03</div>
+                            <h3 data-translate="programming">Programming Experiences</h3>
+                            <p data-translate="programmingDesc">Software development and computer science</p>
+                            <span class="slide-link" data-translate="viewWork">View work →</span>
+                        </a>
+                        <a href="professional-experiences.html" class="carousel-slide">
+                            <div class="slide-number">04</div>
+                            <h3 data-translate="professional">Professional Experiences</h3>
+                            <p data-translate="professionalDesc">Work experience and professional achievements</p>
+                            <span class="slide-link" data-translate="viewWork">View work →</span>
+                        </a>
+                        <a href="startups.html" class="carousel-slide">
+                            <div class="slide-number">05</div>
+                            <h3>Startups & Research Collaborations</h3>
+                            <p>Innovative projects and collaborative research initiatives</p>
+                            <span class="slide-link" data-translate="viewWork">View work →</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+            <div class="cv-link-container">
+                <a href="cv.html" class="cv-link" data-translate="viewCV">View Complete CV →</a>
+                <a href="degrees.html" class="cv-link" data-translate="viewDegrees">View Degrees & Certificates →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-translate="contactTitle">Contact Me</h2>
+            <div class="contact-content">
+                <p data-translate="contactText">For collaboration and inquiries, please contact me via email.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </span>
+                        <a href="mailto:baharhabibifozonabadi@gmail.com">baharhabibifozonabadi@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-translate="footerText">© 2024 Bahar Habibi Fozonabadi</p>
+                <div class="social-links">
+                    <a href="mailto:baharhabibifozonabadi@gmail.com" aria-label="Email" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">س
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <p class="footer-updated" data-translate="lastUpdated">Last updated: <span id="lastUpdatedDate"></span></p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

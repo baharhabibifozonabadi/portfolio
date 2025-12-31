@@ -1,0 +1,320 @@
+// Language Management
+let currentLang = localStorage.getItem('language') || 'en';
+
+// Initialize language on page load
+function initLanguage() {
+    const html = document.documentElement;
+    html.setAttribute('lang', currentLang);
+    html.setAttribute('dir', 'ltr');
+    applyTranslations(currentLang);
+    updateLangToggle();
+}
+
+// Apply translations
+function applyTranslations(lang) {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'BUTTON') {
+                element.value = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+}
+
+// Update language toggle button
+function updateLangToggle() {
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.textContent = currentLang === 'en' ? 'FR' : 'EN';
+    }
+}
+
+// Language toggle functionality
+const langToggle = document.getElementById('langToggle');
+if (langToggle) {
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'fr' : 'en';
+        localStorage.setItem('language', currentLang);
+        applyTranslations(currentLang);
+        updateLangToggle();
+    });
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    initLanguage();
+});
+
+// Mobile Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            if (hamburger) {
+                hamburger.classList.remove('active');
+            }
+        });
+    });
+}
+
+// Smooth Scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Only handle smooth scroll if it's an anchor on the same page
+        if (href.startsWith('#') && href.length > 1) {
+            const targetId = href.substring(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+
+// Active nav link on scroll
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNavLink);
+window.addEventListener('load', updateActiveNavLink);
+
+// Download Functionality
+const downloadButtons = document.querySelectorAll('.btn-download');
+
+downloadButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const fileName = this.getAttribute('data-file');
+
+        if (!fileName) {
+            console.warn('No file specified for download');
+            return;
+        }
+
+        // Create a temporary link element
+        const link = document.createElement('a');
+        link.href = `samples/${fileName}`;
+        link.download = fileName;
+        link.target = '_blank';
+
+        // Append to body, click, and remove
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Show loading state
+        const originalText = this.textContent;
+        const downloadingText = currentLang === 'en' ? 'Downloading...' : 'Téléchargement...';
+        this.textContent = downloadingText;
+        this.disabled = true;
+        this.style.opacity = '0.7';
+        this.style.cursor = 'wait';
+        
+        // Simulate download delay and show success
+        setTimeout(() => {
+            const successText = currentLang === 'en' ? '✓ Downloaded' : '✓ Téléchargé';
+            this.textContent = successText;
+            this.style.background = '#10b981';
+            
+            setTimeout(() => {
+                const downloadText = currentLang === 'en' ? 'Download File' : 'Télécharger le fichier';
+                this.textContent = downloadText;
+                this.style.opacity = '1';
+                this.style.background = '';
+                this.disabled = false;
+                this.style.cursor = 'pointer';
+            }, 2000);
+        }, 1000);
+    });
+});
+
+// Navbar background on scroll
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    const currentScroll = window.pageYOffset;
+
+    if (navbar) {
+        if (currentScroll > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.borderBottom = '1px solid var(--border-color)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.8)';
+            navbar.style.borderBottom = '1px solid var(--border-light)';
+        }
+    }
+
+    lastScroll = currentScroll;
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Carousel Functionality
+const carouselTrack = document.getElementById('carouselTrack');
+const carouselPrev = document.getElementById('carouselPrev');
+const carouselNext = document.getElementById('carouselNext');
+const carouselDots = document.getElementById('carouselDots');
+const slides = document.querySelectorAll('.carousel-slide');
+
+let currentSlide = 0;
+const totalSlides = slides.length;
+
+// Create dots
+if (carouselDots && slides.length > 0) {
+    slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('carousel-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        dot.addEventListener('click', () => goToSlide(index));
+        carouselDots.appendChild(dot);
+    });
+}
+
+function updateCarousel() {
+    if (carouselTrack) {
+        carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    // Update dots
+    const dots = document.querySelectorAll('.carousel-dot');
+    dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+    if (currentSlide >= totalSlides) currentSlide = 0;
+    updateCarousel();
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+}
+
+if (carouselNext) {
+    carouselNext.addEventListener('click', nextSlide);
+}
+
+if (carouselPrev) {
+    carouselPrev.addEventListener('click', prevSlide);
+}
+
+// Auto-play carousel (optional - can be disabled)
+let autoPlayInterval;
+function startAutoPlay() {
+    autoPlayInterval = setInterval(nextSlide, 5000);
+}
+
+function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+}
+
+// Start auto-play when page loads
+if (slides.length > 0) {
+    startAutoPlay();
+    
+    // Pause on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+        carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    }
+}
+
+// Touch/swipe support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+if (carouselTrack) {
+    carouselTrack.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carouselTrack.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+}
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
+    }
+}
+
+// Observe portfolio items
+const portfolioItems = document.querySelectorAll('.portfolio-item-detailed');
+portfolioItems.forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(20px)';
+    item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    observer.observe(item);
+});

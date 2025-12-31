@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology - Bahar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Bahar</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="navHome">Home</a></li>
+                <li><a href="index.html#about" class="nav-link" data-translate="navAbout">About</a></li>
+                <li><a href="index.html#specialties" class="nav-link" data-translate="navSpecialties">Specialties</a>
+                </li>
+                <li><a href="index.html#contact" class="nav-link" data-translate="navContact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">FR</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Specialty Header -->
+    <section class="specialty-header">
+        <div class="container">
+            <a href="index.html#specialties" class="back-link" data-translate="backToSpecialties">← Back to
+                Specialties</a>
+            <div class="specialty-header-content">
+                <div class="specialty-icon-large">🧠</div>
+                <h1 data-translate="psychologyTitle">Psychology</h1>
+                <p class="specialty-subtitle" data-translate="psychologySubtitle">Understanding the human mind and
+                    behavior</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialty Content -->
+    <section class="specialty-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="description-section">
+                    <h2 data-translate="psychologyAboutTitle">About My Work in Psychology</h2>
+                    <p data-translate="psychologyAbout1">
+                        Psychology is the foundation of my deep understanding of humanity. I am interested in studying
+                        and researching various areas of psychology, including cognitive psychology, behavioral
+                        psychology, and social psychology.
+                    </p>
+                    <p data-translate="psychologyAbout2">
+                        One unique aspect of my work is combining psychological knowledge with computer science. I work
+                        in computational psychology and use machine learning algorithms to model human behavior.
+                    </p>
+                    <p data-translate="psychologyAbout3">
+                        My research focuses on understanding how information is processed in the human brain and using
+                        this understanding to develop intelligent systems. I believe that combining psychology and
+                        computer science can lead to more human-centered and effective technologies.
+                    </p>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 data-translate="psychologyPortfolio">Portfolio</h2>
+                    <div class="portfolio-list">
+                        <div class="portfolio-item-detailed">
+                            <div class="portfolio-item-header">
+                                <h3 data-translate="psychologySample1">Research in Cognitive Psychology</h3>
+                                <span class="portfolio-year">2023</span>
+                            </div>
+                            <p class="portfolio-description" data-translate="psychologyDesc1">
+                                A comprehensive research on information processing and decision-making in the human
+                                brain. This research includes experimental studies and data analysis using advanced
+                                statistical methods.
+                            </p>
+                            <button class="btn-download" data-file="psychology-sample-1.pdf"
+                                data-translate="downloadFile">Download File</button>
+                        </div>
+
+                        <div class="portfolio-item-detailed">
+                            <div class="portfolio-item-header">
+                                <h3 data-translate="psychologySample2">Behavior Modeling with Machine Learning</h3>
+                                <span class="portfolio-year">2022</span>
+                            </div>
+                            <p class="portfolio-description" data-translate="psychologyDesc2">
+                                Development of a machine learning model to predict human behavior based on psychological
+                                data. This project combines psychological knowledge with advanced computer science
+                                techniques.
+                            </p>
+                            <button class="btn-download" data-file="psychology-sample-2.pdf"
+                                data-translate="downloadFile">Download File</button>
+                        </div>
+
+                        <div class="portfolio-item-detailed">
+                            <div class="portfolio-item-header">
+                                <h3 data-translate="psychologySample3">Analysis of Psychological Data</h3>
+                                <span class="portfolio-year">2021</span>
+                            </div>
+                            <p class="portfolio-description" data-translate="psychologyDesc3">
+                                A comprehensive analytical project on psychological data using statistical methods and
+                                data mining techniques. This project includes data visualization and extraction of
+                                meaningful patterns.
+                            </p>
+                            <button class="btn-download" data-file="psychology-sample-3.pdf"
+                                data-translate="downloadFile">Download File</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-translate="footerText">© 2024 Bahar</p>
+                <div class="social-links">
+                    <a href="mailto:baharhabibifozonabadi@gmail.com" aria-label="Email" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <p class="footer-updated" data-translate="lastUpdated">Last updated: <span id="lastUpdatedDate"></span></p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

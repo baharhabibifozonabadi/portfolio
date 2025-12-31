@@ -1,0 +1,13 @@
+1 upcoming - learning 
+**Title for Portfolio:**
+*“Minimalistic LLM Model Based on Speranto (Python Implementation)”*
+
+**Short Description for Portfolio:**
+Development of a simplified language model in Python using Speranto, designed to analyze and simulate various language games inspired by Wittgenstein. This project explores human communication and cognition through a controlled, minimalistic linguistic framework, enabling experiments in semantics, pragmatics, and rule-based interaction.
+
+2
+Title for Portfolio:
+“Python Backend for MMPI Testing and Analysis”
+
+Short Description for Portfolio:
+Development of a Python-based backend to administer, process, and analyze MMPI psychological tests. The system automates scoring, interprets results, and generates structured digital reports, enabling efficient and accurate assessment of personality and psychological traits.

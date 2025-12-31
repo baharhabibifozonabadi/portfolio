@@ -1,0 +1,27 @@
+This project focuses on the systematic recording, transcription, and analysis of therapy session audio, aimed at producing structured digital files that capture both the verbal and interactional dynamics of therapeutic encounters. While the technical implementation of the audio recording and transcription software was handled by other team members, my role centered on the analytical and methodological aspects of the project, bridging applied psychology principles with structured data analysis.
+
+Specifically, my work involves analyzing the transcribed sessions using established note-taking and behavioral observation frameworks, such as the Gottman Method, Reflective Practice Notes, and APA Behavioral Coding standards. These methods provide a structured approach to capturing nuanced interpersonal dynamics, emotional exchanges, and behavioral patterns in therapy, allowing for both qualitative and quantitative insights. By combining these frameworks with speech and conversation analysis techniques, particularly Conversation Analysis (CA), I am able to examine turn-taking, interruptions, overlaps, speech repair strategies, and other features of spoken interaction that reveal underlying psychological processes and relational patterns.
+
+In practice, my workflow includes carefully reviewing each transcribed session, annotating behavioral and linguistic cues, and categorizing them according to the relevant theoretical frameworks. For example, the Gottman Method helps identify relational dynamics and communication patterns within couples or group therapy, while Reflective Practice Notes allow for the therapist’s subjective insights and interpretations to be systematically incorporated into the dataset. APA Behavioral Coding provides standardized categories for emotional expressions, coping mechanisms, and client engagement, enabling cross-session and cross-client comparison. Conversation Analysis then allows for detailed micro-level examination of interactional sequences, revealing patterns that might be invisible in narrative or thematic analysis alone.
+
+The culmination of this work is a comprehensive, structured digital file for each therapy session, synthesizing multiple layers of analysis—verbal content, behavioral coding, interactional patterns, and reflective notes. These files are designed not only for therapeutic documentation and clinical review, but also for research purposes, providing a rich dataset for analyzing psychological and relational dynamics across clients and sessions. The output is both scalable and standardized, ensuring consistent application of analytical frameworks across different therapists, sessions, and therapeutic modalities.
+
+Importantly, this product is commercially oriented and has been integrated into applied digital health services. We are collaborating with platforms such as دکترتو and اسنپ دکتر, enabling the structured session analysis to be offered as part of their suite of therapeutic services. This collaboration ensures that therapists using these platforms can benefit from high-quality session documentation, objective behavioral insights, and evidence-informed feedback to improve clinical outcomes.
+
+Overall, this project represents a sophisticated intersection of applied psychology, structured behavioral analysis, and digital service delivery, where my contributions focus on methodological rigor, analysis design, and practical implementation within real-world therapeutic contexts. It demonstrates how analytical frameworks from psychology can be operationalized into actionable digital outputs, providing meaningful support for therapists, clients, and healthcare platforms alike.
+
+Key Responsibilities and Workflow:
+
+Reviewed and analyzed transcribed therapy sessions using Gottman Method, Reflective Practice Notes, and APA Behavioral Coding.
+
+Applied Conversation Analysis (CA) to examine micro-level interactional dynamics in therapy sessions.
+
+Integrated multiple layers of analysis—verbal, behavioral, interactional, and reflective—into a comprehensive digital record.
+
+Developed standardized protocols for documenting, coding, and summarizing sessions to ensure consistency and reliability.
+
+Collaborated with faculty and clinical experts to refine analytical frameworks and ensure evidence-based application.
+
+Coordinated with commercial platforms such as دکترتو and اسنپ دکتر to deploy the structured session analysis as part of their therapeutic service offerings.
+
+Contributed to the scalable design of a digital tool that bridges applied psychology research with practical, real-world therapy documentation.

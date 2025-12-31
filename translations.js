@@ -1,0 +1,392 @@
+// Translations object
+const translations = {
+    en: {
+        // Navigation
+        navHome: "Home",
+        navAbout: "About",
+        navProjects: "Projects",
+        navContact: "Contact",
+        
+        // Hero
+        heroTitle: "Bahar Habibi",
+        heroSubtitle: "Theatre artist, writer, and researcher",
+        heroDescription: "I study drama, language, and cognition while creating original plays and interdisciplinary projects that combine artistic practice with scientific research.",
+        
+        // About
+        aboutTitle: "About Me",
+        aboutText1: "I am Bahar Habibi Fozonabadi, a theatre artist, writer, and researcher. I study drama, language, and cognition while creating original plays and interdisciplinary projects that combine artistic practice with scientific research.",
+        aboutText2: "My work spans theater and performing arts, research in psychology, programming and software development, as well as interdisciplinary research that connects these fields. I believe that the intersection of art and science creates unique opportunities for understanding human experience and cognition.",
+        
+        // Projects
+        projectsTitle: "My Projects",
+        projectsSubtitle: "Explore my work across different disciplines",
+        stories: "Stories and Performances",
+        storiesDesc: "Narrative works and theatrical performances",
+        essays: "Essays and Translations",
+        essaysDesc: "Written works and translation projects",
+        programming: "Programming Experiences",
+        programmingDesc: "Software development and computer science",
+        professional: "Professional Experiences",
+        professionalDesc: "Work experience and professional achievements",
+        viewWork: "View work →",
+        viewCV: "View Complete CV →",
+        viewDegrees: "View Degrees & Certificates →",
+        
+        // Contact
+        contactTitle: "Contact Me",
+        contactText: "For collaboration and inquiries, please contact me via email.",
+        
+        // Footer
+        footerText: "© 2024 Bahar Habibi Fozonabadi",
+        
+        // Project Pages
+        backToProjects: "← Back to Projects",
+        backToHome: "← Back to Home",
+        
+        // Degrees & Certificates
+        degreesTitle: "Degrees & Certificates",
+        degreesSubtitle: "Academic qualifications and professional certifications",
+        degreesSection: "Academic Degrees",
+        degree1Title: "Bachelor's Degree in [Field]",
+        degree1Desc: "Institution: [University Name]\nLocation: [City, Country]\nGPA/Marks: [Your GPA or marks]\nRelevant Coursework: [List key courses or specializations]",
+        degree2Title: "Master's Degree in [Field]",
+        degree2Desc: "Institution: [University Name]\nLocation: [City, Country]\nGPA/Marks: [Your GPA or marks]\nThesis/Dissertation: [Title of thesis if applicable]",
+        degree3Title: "Additional Degree or Qualification",
+        degree3Desc: "Institution: [Institution Name]\nLocation: [City, Country]\nDetails: [Additional information about this qualification]",
+        certificatesSection: "Professional Certificates",
+        cert1Title: "Certificate in [Subject]",
+        cert1Desc: "Issuing Organization: [Organization Name]\nDuration: [Duration of course/program]\nSkills Acquired: [List relevant skills or competencies]",
+        cert2Title: "Professional Certification",
+        cert2Desc: "Issuing Organization: [Organization Name]\nCertification ID: [If applicable]\nValidity: [Expiration date if applicable]",
+        cert3Title: "Online Course Certificate",
+        cert3Desc: "Platform: [Platform Name]\nCourse: [Course Title]\nInstructor: [Instructor Name if relevant]",
+        awardsSection: "Awards & Honors",
+        award1Title: "Academic Award",
+        award1Desc: "Organization: [Organization Name]\nDescription: [Details about the award and why it was received]",
+        award2Title: "Scholarship or Grant",
+        award2Desc: "Organization: [Organization Name]\nPurpose: [Purpose of the scholarship or grant]",
+        
+        // CV Page
+        cvTitle: "Curriculum Vitae",
+        cvSubtitle: "Complete resume and professional background",
+        cvPersonalInfo: "Personal Information",
+        cvPersonalText: "Name: Bahar\nEmail: baharhabibifozonabadi@gmail.com\nLocation: [Your Location]",
+        lastUpdated: "Last updated:",
+        cvEducation: "Education",
+        cvEducation1Title: "Degree in [Field]",
+        cvEducation1Desc: "[University Name] - [Description of studies and achievements]",
+        cvEducation2Title: "Additional Qualifications",
+        cvEducation2Desc: "[Details about additional education, certifications, or training]",
+        cvExperience: "Professional Experience",
+        cvExp1Title: "Research Position: Cognitive Computing Lab",
+        cvExp1Desc: "Worked as a research assistant in a cognitive computing laboratory, focusing on projects that combine machine learning with psychological research. Contributed to publications and developed tools for analyzing cognitive data.",
+        cvExp2Title: "Software Developer: Human-Centered Design Team",
+        cvExp2Desc: "Developed software applications with a focus on user experience and psychological principles. Worked in an interdisciplinary team to create tools that improve mental health and cognitive well-being through technology.",
+        cvExp3Title: "Creative Director: Interdisciplinary Arts Project",
+        cvExp3Desc: "Led a creative project that combined theater, technology, and psychological research. Coordinated a team of artists, programmers, and researchers to create an immersive experience exploring themes of memory and identity.",
+        cvSkills: "Skills",
+        cvSkillsText: "Programming: Python, JavaScript, Web Development, Machine Learning\nResearch: Data Analysis, Statistical Methods, Experimental Design\nLanguages: [List your languages]\nOther: [Additional relevant skills]",
+        cvPublications: "Publications & Projects",
+        cvPub1Title: "Research Publication",
+        cvPub1Desc: "[Title of publication] - [Journal/Conference Name]",
+        cvPub2Title: "Creative Project",
+        cvPub2Desc: "[Description of creative or interdisciplinary project]",
+        downloadCV: "Download PDF CV",
+        
+        // Stories and Performances
+        storiesTitle: "Stories and Performances",
+        storiesSubtitle: "Narrative works and theatrical performances",
+        storiesAboutTitle: "About My Stories and Performances",
+        storiesAbout1: "Through storytelling and performance, I explore the depths of human experience and emotion. My work in this area combines narrative writing with theatrical expression, creating immersive experiences that connect with audiences on multiple levels.",
+        storiesAbout2: "I write stories that examine psychological themes, human relationships, and the intersection of technology and humanity. My performances bring these narratives to life, using both traditional theatrical techniques and innovative multimedia approaches.",
+        storiesAbout3: "This collection includes short stories, scripts, performance recordings, and documentation of theatrical works that I have written, directed, or performed in.",
+        storiesPortfolio: "Portfolio",
+        storiesSample1: "Story Collection: Digital Minds",
+        storiesSample2: "Performance: The Memory Project",
+        storiesSample3: "Script: Between Worlds",
+        storiesDesc1: "A collection of short stories exploring the relationship between human consciousness and artificial intelligence. These narratives examine themes of identity, memory, and what it means to be human in a digital age.",
+        storiesDesc2: "An interactive theatrical performance combining live acting with digital projections. The piece explores how memories shape our identity and how technology affects our relationship with the past.",
+        storiesDesc3: "A full-length play script examining the psychological impact of living between cultures and languages. The work combines elements of psychological drama with experimental narrative structure.",
+        
+        // Essays and Translations
+        essaysTitle: "Essays and Translations",
+        essaysSubtitle: "Written works and translation projects",
+        essaysAboutTitle: "About My Essays and Translations",
+        essaysAbout1: "My written work spans academic essays, literary criticism, and creative non-fiction. I explore topics at the intersection of psychology, technology, and culture, bringing an interdisciplinary perspective to complex subjects.",
+        essaysAbout2: "As a translator, I work with texts that bridge languages and cultures, with a particular focus on psychological and literary works. My translation practice emphasizes not just linguistic accuracy, but also cultural nuance and the preservation of the original work's emotional and intellectual impact.",
+        essaysAbout3: "This collection includes academic essays, literary analyses, cultural commentary, and translations of both contemporary and classical texts across multiple languages.",
+        essaysPortfolio: "Portfolio",
+        essaysSample1: "Essay: The Psychology of Digital Interaction",
+        essaysSample2: "Translation: Modern Persian Poetry Collection",
+        essaysSample3: "Essay: Interdisciplinary Approaches to Cognitive Science",
+        essaysDesc1: "An academic essay examining how digital communication platforms affect human psychological development and social relationships. The work combines psychological research with cultural analysis.",
+        essaysDesc2: "A translation project featuring contemporary Persian poetry into English. The work focuses on preserving the emotional depth and cultural context of the original poems while making them accessible to English-speaking readers.",
+        essaysDesc3: "A scholarly essay exploring how insights from psychology, computer science, and philosophy can be integrated to better understand human cognition. The work argues for the value of interdisciplinary research methodologies.",
+        
+        // Programming
+        programmingTitle: "Programming Experiences",
+        theaterTitle: "Theater",
+        theaterSubtitle: "Performing arts and performance",
+        theaterAboutTitle: "About My Work in Theater",
+        theaterAbout1: "Theater for me is more than an art form; it's a powerful tool for exploring the depths of human experience. Through theater, I examine the complex relationships between mind, emotions, and behavior.",
+        theaterAbout2: "My activities in this field include acting, directing, and playwriting. I am interested in using psychological techniques in performance and leveraging technology to create innovative theatrical experiences.",
+        theaterAbout3: "My interdisciplinary approach to theater combines a deep understanding of character psychology with the use of digital tools to create interactive and multimedia experiences.",
+        theaterPortfolio: "Portfolio",
+        
+        // Art
+        artTitle: "Art",
+        artSubtitle: "Artistic creation and experience",
+        artAboutTitle: "About My Work in Art",
+        artAbout1: "Art is my way of expressing complex concepts and human experiences. Through art, I explore the relationships between perception, emotion, and cognition.",
+        artAbout2: "My artistic activities include painting, design, and digital arts. I am interested in using technology in artistic creation and applying principles of perceptual psychology in design.",
+        artAbout3: "My approach to art combines traditional aesthetics with technological innovations. I believe that art can serve as a bridge between the humanities and computer science.",
+        artPortfolio: "Portfolio",
+        
+        // Psychology
+        psychologyTitle: "Psychology",
+        psychologySubtitle: "Understanding the human mind and behavior",
+        psychologyAboutTitle: "About My Work in Psychology",
+        psychologyAbout1: "Psychology is the foundation of my deep understanding of humanity. I am interested in studying and researching various areas of psychology, including cognitive psychology, behavioral psychology, and social psychology.",
+        psychologyAbout2: "One unique aspect of my work is combining psychological knowledge with computer science. I work in computational psychology and use machine learning algorithms to model human behavior.",
+        psychologyAbout3: "My research focuses on understanding how information is processed in the human brain and using this understanding to develop intelligent systems. I believe that combining psychology and computer science can lead to more human-centered and effective technologies.",
+        psychologyPortfolio: "Portfolio",
+        
+        // Programming
+        programmingTitle: "Programming",
+        programmingSubtitle: "Software development and computer science",
+        programmingAboutTitle: "About My Work in Programming",
+        programmingAbout1: "Programming is my tool for turning ideas into reality. I work in software development and computer science research, with a special focus on applications of psychology and cognitive science in technology.",
+        programmingAbout2: "My expertise includes web development, Python programming, machine learning, and data processing. I am interested in creating software that uses psychological principles to improve user experience.",
+        programmingAbout3: "My approach to programming combines technical skills with a deep understanding of human needs. I believe that the best software is not only technically strong but also psychologically understandable and usable for users.",
+        programmingPortfolio: "Portfolio",
+        
+        // Research
+        researchTitle: "Research",
+        researchSubtitle: "Interdisciplinary research",
+        researchAboutTitle: "About My Research Activities",
+        researchAbout1: "Research is the heart of my interdisciplinary work. I conduct research that breaks down boundaries between different disciplines and provides innovative solutions to complex challenges.",
+        researchAbout2: "The main focus of my research is on the intersection of psychology and computer science. I work in areas such as computational psychology, human-centered artificial intelligence, and using technology to improve mental health.",
+        researchAbout3: "My research methodology combines qualitative and quantitative methods. I use advanced statistical techniques, machine learning, and data analysis to extract meaningful insights. I also believe in the importance of human-centered approaches in technological research.",
+        researchNote: "Interdisciplinary Approach:",
+        researchNoteText: "My research demonstrates that the best results emerge when different perspectives are combined. I believe that the future of science lies in interdisciplinary collaboration.",
+        researchPortfolio: "Portfolio",
+        
+        // Portfolio items
+        portfolioYear: "Year",
+        downloadFile: "Download File",
+        downloading: "Downloading...",
+        
+        // Sample portfolio items
+        theaterSample1: "Theater Sample 1",
+        theaterSample2: "Theater Sample 2",
+        theaterSample3: "Theater Sample 3",
+        artSample1: "Art Sample 1",
+        artSample2: "Art Sample 2",
+        artSample3: "Art Sample 3",
+        psychologySample1: "Research in Cognitive Psychology",
+        psychologySample2: "Behavior Modeling with Machine Learning",
+        psychologySample3: "Analysis of Psychological Data",
+        programmingSample1: "User Behavior Analysis System",
+        programmingSample2: "Psychological Research Platform",
+        programmingSample3: "Cognitive Data Visualization Tool",
+        researchSample1: "Research: Cognitive Modeling with Neural Networks",
+        researchSample2: "Article: Technology and Mental Health",
+        researchSample3: "Project: Interdisciplinary Data Analysis",
+        
+        // Portfolio descriptions
+        portfolioDesc: "Complete description of this portfolio item. This project included various aspects and achieved significant results.",
+        psychologyDesc1: "A comprehensive research on information processing and decision-making in the human brain. This research includes experimental studies and data analysis using advanced statistical methods.",
+        psychologyDesc2: "Development of a machine learning model to predict human behavior based on psychological data. This project combines psychological knowledge with advanced computer science techniques.",
+        psychologyDesc3: "A comprehensive analytical project on psychological data using statistical methods and data mining techniques. This project includes data visualization and extraction of meaningful patterns.",
+        programmingDesc1: "A software system for analyzing user behavior using machine learning techniques and psychological principles. This project includes API development and an analytical dashboard.",
+        programmingDesc2: "Development of an online platform for conducting psychological experiments and data collection. This platform includes an interactive user interface and data management system.",
+        programmingDesc3: "A software tool for visualizing and analyzing data related to cognitive performance. This project uses advanced data visualization libraries.",
+        researchDesc1: "A comprehensive research on using neural networks to model human cognitive processes. This research includes experimental design, data collection, and analysis using advanced methods.",
+        researchDesc2: "A research article on using technology to improve mental health. This article includes literature review, data analysis, and presentation of practical solutions.",
+        researchDesc3: "A large analytical project that combines data from multiple disciplines. This project includes the use of data mining and machine learning techniques to discover complex patterns."
+    },
+    fr: {
+        // Navigation
+        navHome: "Accueil",
+        navAbout: "À propos",
+        navProjects: "Projets",
+        navContact: "Contact",
+        
+        // Hero
+        heroTitle: "Bahar Habibi",
+        heroSubtitle: "Chercheuse Interdisciplinaire",
+        heroDescription: "À l'intersection de la psychologie et de l'informatique, où l'esprit humain et la technologie convergent",
+        
+        // About
+        aboutTitle: "À propos de moi",
+        aboutText1: "Je suis Bahar, une chercheuse et artiste travaillant dans l'espace interdisciplinaire entre la psychologie et l'informatique. Je crois qu'une compréhension plus profonde de l'esprit humain combinée à la puissance de la technologie peut créer des solutions innovantes aux défis complexes.",
+        aboutText2: "Mes activités comprennent le théâtre et les arts du spectacle, la recherche en psychologie, la programmation et le développement de logiciels, ainsi que la recherche interdisciplinaire qui relie ces domaines.",
+        aboutNote: "Approche Interdisciplinaire:",
+        aboutNoteText: "Je crois que les meilleures solutions émergent de la combinaison de différentes perspectives et de la connexion de disciplines apparemment sans rapport.",
+        
+        // Projects
+        projectsTitle: "Mes Projets",
+        projectsSubtitle: "Explorez mon travail dans différentes disciplines",
+        stories: "Histoires et Performances",
+        storiesDesc: "Œuvres narratives et performances théâtrales",
+        essays: "Essais et Traductions",
+        essaysDesc: "Œuvres écrites et projets de traduction",
+        programming: "Expériences de Programmation",
+        programmingDesc: "Développement de logiciels et informatique",
+        professional: "Expériences Professionnelles",
+        professionalDesc: "Expérience professionnelle et réalisations",
+        viewWork: "Voir le travail →",
+        viewCV: "Voir le CV Complet →",
+        viewDegrees: "Voir les Diplômes et Certificats →",
+        
+        // Contact
+        contactTitle: "Contactez-moi",
+        contactText: "Pour la collaboration et les demandes, veuillez me contacter par email.",
+        
+        // Footer
+        footerText: "© 2024 Bahar Habibi Fozonabadi",
+        
+        // Project Pages
+        backToProjects: "← Retour aux Projets",
+        backToHome: "← Retour à l'Accueil",
+        
+        // Degrees & Certificates (French)
+        degreesTitle: "Diplômes et Certificats",
+        degreesSubtitle: "Qualifications académiques et certifications professionnelles",
+        degreesSection: "Diplômes Académiques",
+        degree1Title: "Licence en [Domaine]",
+        degree1Desc: "Institution: [Nom de l'université]\nLocalisation: [Ville, Pays]\nGPA/Notes: [Votre GPA ou notes]\nCours Pertinents: [Liste des cours clés ou spécialisations]",
+        degree2Title: "Master en [Domaine]",
+        degree2Desc: "Institution: [Nom de l'université]\nLocalisation: [Ville, Pays]\nGPA/Notes: [Votre GPA ou notes]\nThèse/Mémoire: [Titre de la thèse si applicable]",
+        degree3Title: "Diplôme ou Qualification Supplémentaire",
+        degree3Desc: "Institution: [Nom de l'institution]\nLocalisation: [Ville, Pays]\nDétails: [Informations supplémentaires sur cette qualification]",
+        certificatesSection: "Certificats Professionnels",
+        cert1Title: "Certificat en [Sujet]",
+        cert1Desc: "Organisation Émettrice: [Nom de l'organisation]\nDurée: [Durée du cours/programme]\nCompétences Acquises: [Liste des compétences ou compétences pertinentes]",
+        cert2Title: "Certification Professionnelle",
+        cert2Desc: "Organisation Émettrice: [Nom de l'organisation]\nID de Certification: [Si applicable]\nValidité: [Date d'expiration si applicable]",
+        cert3Title: "Certificat de Cours en Ligne",
+        cert3Desc: "Plateforme: [Nom de la plateforme]\nCours: [Titre du cours]\nInstructeur: [Nom de l'instructeur si pertinent]",
+        awardsSection: "Prix et Distinctions",
+        award1Title: "Prix Académique",
+        award1Desc: "Organisation: [Nom de l'organisation]\nDescription: [Détails sur le prix et pourquoi il a été reçu]",
+        award2Title: "Bourse ou Subvention",
+        award2Desc: "Organisation: [Nom de l'organisation]\nObjectif: [Objectif de la bourse ou de la subvention]",
+        
+        // CV Page (French)
+        cvTitle: "Curriculum Vitae",
+        cvSubtitle: "CV complet et parcours professionnel",
+        cvPersonalInfo: "Informations Personnelles",
+        cvPersonalText: "Nom: Bahar\nEmail: baharhabibifozonabadi@gmail.com\nLocalisation: [Votre localisation]",
+        lastUpdated: "Dernière mise à jour:",
+        cvEducation: "Formation",
+        cvEducation1Title: "Diplôme en [Domaine]",
+        cvEducation1Desc: "[Nom de l'université] - [Description des études et réalisations]",
+        cvEducation2Title: "Qualifications Supplémentaires",
+        cvEducation2Desc: "[Détails sur la formation supplémentaire, certifications ou formations]",
+        cvExperience: "Expérience Professionnelle",
+        cvExp1Title: "Poste de recherche: Laboratoire de Calcul Cognitif",
+        cvExp1Desc: "Travail en tant qu'assistant de recherche dans un laboratoire de calcul cognitif, se concentrant sur des projets qui combinent l'apprentissage automatique avec la recherche psychologique. Contribution à des publications et développement d'outils pour analyser les données cognitives.",
+        cvExp2Title: "Développeur de logiciels: Équipe de Conception Centrée sur l'Humain",
+        cvExp2Desc: "Développement d'applications logicielles axées sur l'expérience utilisateur et les principes psychologiques. Travail dans une équipe interdisciplinaire pour créer des outils qui améliorent la santé mentale et le bien-être cognitif grâce à la technologie.",
+        cvExp3Title: "Directeur créatif: Projet d'Arts Interdisciplinaires",
+        cvExp3Desc: "Direction d'un projet créatif qui combine théâtre, technologie et recherche psychologique. Coordination d'une équipe d'artistes, de programmeurs et de chercheurs pour créer une expérience immersive explorant les thèmes de la mémoire et de l'identité.",
+        cvSkills: "Compétences",
+        cvSkillsText: "Programmation: Python, JavaScript, Développement Web, Apprentissage Automatique\nRecherche: Analyse de Données, Méthodes Statistiques, Conception Expérimentale\nLangues: [Listez vos langues]\nAutres: [Compétences supplémentaires pertinentes]",
+        cvPublications: "Publications & Projets",
+        cvPub1Title: "Publication de Recherche",
+        cvPub1Desc: "[Titre de la publication] - [Nom du Journal/Conférence]",
+        cvPub2Title: "Projet Créatif",
+        cvPub2Desc: "[Description du projet créatif ou interdisciplinaire]",
+        downloadCV: "Télécharger le CV PDF",
+        
+        // Stories and Performances
+        storiesTitle: "Histoires et Performances",
+        storiesSubtitle: "Œuvres narratives et performances théâtrales",
+        storiesAboutTitle: "À propos de mes histoires et performances",
+        storiesAbout1: "À travers la narration et la performance, j'explore les profondeurs de l'expérience et de l'émotion humaines. Mon travail dans ce domaine combine l'écriture narrative avec l'expression théâtrale, créant des expériences immersives qui se connectent avec le public à plusieurs niveaux.",
+        storiesAbout2: "J'écris des histoires qui examinent les thèmes psychologiques, les relations humaines et l'intersection de la technologie et de l'humanité. Mes performances donnent vie à ces récits, utilisant à la fois des techniques théâtrales traditionnelles et des approches multimédias innovantes.",
+        storiesAbout3: "Cette collection comprend des nouvelles, des scripts, des enregistrements de performances et la documentation d'œuvres théâtrales que j'ai écrites, mises en scène ou interprétées.",
+        storiesPortfolio: "Portfolio",
+        storiesSample1: "Collection d'histoires: Esprits Numériques",
+        storiesSample2: "Performance: Le Projet Mémoire",
+        storiesSample3: "Script: Entre les Mondes",
+        storiesDesc1: "Une collection de nouvelles explorant la relation entre la conscience humaine et l'intelligence artificielle. Ces récits examinent les thèmes de l'identité, de la mémoire et de ce que signifie être humain à l'ère numérique.",
+        storiesDesc2: "Une performance théâtrale interactive combinant le jeu d'acteur en direct avec des projections numériques. La pièce explore comment les souvenirs façonnent notre identité et comment la technologie affecte notre relation avec le passé.",
+        storiesDesc3: "Un script de pièce complète examinant l'impact psychologique de vivre entre les cultures et les langues. L'œuvre combine des éléments de drame psychologique avec une structure narrative expérimentale.",
+        
+        // Essays and Translations
+        essaysTitle: "Essais et Traductions",
+        essaysSubtitle: "Œuvres écrites et projets de traduction",
+        essaysAboutTitle: "À propos de mes essais et traductions",
+        essaysAbout1: "Mon travail écrit couvre les essais académiques, la critique littéraire et la non-fiction créative. J'explore des sujets à l'intersection de la psychologie, de la technologie et de la culture, apportant une perspective interdisciplinaire à des sujets complexes.",
+        essaysAbout2: "En tant que traductrice, je travaille avec des textes qui relient les langues et les cultures, avec un accent particulier sur les œuvres psychologiques et littéraires. Ma pratique de traduction met l'accent non seulement sur la précision linguistique, mais aussi sur la nuance culturelle et la préservation de l'impact émotionnel et intellectuel de l'œuvre originale.",
+        essaysAbout3: "Cette collection comprend des essais académiques, des analyses littéraires, des commentaires culturels et des traductions de textes contemporains et classiques dans plusieurs langues.",
+        essaysPortfolio: "Portfolio",
+        essaysSample1: "Essai: La Psychologie de l'Interaction Numérique",
+        essaysSample2: "Traduction: Collection de Poésie Persane Moderne",
+        essaysSample3: "Essai: Approches Interdisciplinaires des Sciences Cognitives",
+        essaysDesc1: "Un essai académique examinant comment les plateformes de communication numérique affectent le développement psychologique humain et les relations sociales. Le travail combine la recherche psychologique avec l'analyse culturelle.",
+        essaysDesc2: "Un projet de traduction présentant la poésie persane contemporaine en anglais. Le travail se concentre sur la préservation de la profondeur émotionnelle et du contexte culturel des poèmes originaux tout en les rendant accessibles aux lecteurs anglophones.",
+        essaysDesc3: "Un essai savant explorant comment les insights de la psychologie, de l'informatique et de la philosophie peuvent être intégrés pour mieux comprendre la cognition humaine. Le travail plaide pour la valeur des méthodologies de recherche interdisciplinaires.",
+        
+        // Programming
+        programmingTitle: "Expériences de Programmation",
+        programmingSubtitle: "Développement de logiciels et informatique",
+        programmingAboutTitle: "À propos de mon travail en programmation",
+        programmingAbout1: "La programmation est mon outil pour transformer les idées en réalité. Je travaille dans le développement de logiciels et la recherche en informatique, avec un accent particulier sur les applications de la psychologie et des sciences cognitives dans la technologie.",
+        programmingAbout2: "Mon expertise comprend le développement web, la programmation Python, l'apprentissage automatique et le traitement des données. Je suis intéressée par la création de logiciels qui utilisent les principes psychologiques pour améliorer l'expérience utilisateur.",
+        programmingAbout3: "Mon approche de la programmation combine les compétences techniques avec une compréhension approfondie des besoins humains. Je crois que les meilleurs logiciels ne sont pas seulement techniquement solides mais aussi psychologiquement compréhensibles et utilisables pour les utilisateurs.",
+        programmingPortfolio: "Portfolio",
+        
+        // Professional Experiences
+        professionalTitle: "Expériences Professionnelles",
+        professionalSubtitle: "Expérience professionnelle et réalisations",
+        professionalAboutTitle: "À propos de mes expériences professionnelles",
+        professionalAbout1: "Mon parcours professionnel s'étend sur plusieurs disciplines, reflétant mon approche interdisciplinaire du travail. J'ai travaillé dans des rôles qui combinent recherche, technologie et expression créative, cherchant toujours à relier différents domaines et perspectives.",
+        professionalAbout2: "Tout au long de ma carrière, j'ai contribué à des projets qui intègrent la psychologie, l'informatique et les arts. Mon expérience professionnelle comprend des postes de recherche, des rôles de développement de logiciels et des projets créatifs qui démontrent la valeur de la collaboration interdisciplinaire.",
+        professionalAbout3: "Cette section documente mes réalisations professionnelles, mon historique de travail et les différents rôles que j'ai occupés qui démontrent ma capacité à travailler au-delà des frontières traditionnelles et à créer des solutions innovantes.",
+        professionalPortfolio: "Portfolio",
+        professionalSample1: "Poste de recherche: Laboratoire de Calcul Cognitif",
+        professionalSample2: "Développeur de logiciels: Équipe de Conception Centrée sur l'Humain",
+        professionalSample3: "Directeur créatif: Projet d'Arts Interdisciplinaires",
+        professionalDesc1: "Travail en tant qu'assistant de recherche dans un laboratoire de calcul cognitif, se concentrant sur des projets qui combinent l'apprentissage automatique avec la recherche psychologique. Contribution à des publications et développement d'outils pour analyser les données cognitives.",
+        professionalDesc2: "Développement d'applications logicielles axées sur l'expérience utilisateur et les principes psychologiques. Travail dans une équipe interdisciplinaire pour créer des outils qui améliorent la santé mentale et le bien-être cognitif grâce à la technologie.",
+        professionalDesc3: "Direction d'un projet créatif qui combine théâtre, technologie et recherche psychologique. Coordination d'une équipe d'artistes, de programmeurs et de chercheurs pour créer une expérience immersive explorant les thèmes de la mémoire et de l'identité.",
+        
+        // Portfolio items
+        portfolioYear: "Année",
+        downloadFile: "Télécharger le fichier",
+        downloading: "Téléchargement...",
+        
+        // Sample portfolio items
+        theaterSample1: "Échantillon de théâtre 1",
+        theaterSample2: "Échantillon de théâtre 2",
+        theaterSample3: "Échantillon de théâtre 3",
+        artSample1: "Échantillon d'art 1",
+        artSample2: "Échantillon d'art 2",
+        artSample3: "Échantillon d'art 3",
+        psychologySample1: "Recherche en psychologie cognitive",
+        psychologySample2: "Modélisation du comportement avec l'apprentissage automatique",
+        psychologySample3: "Analyse des données psychologiques",
+        programmingSample1: "Système d'analyse du comportement utilisateur",
+        programmingSample2: "Plateforme de recherche psychologique",
+        programmingSample3: "Outil de visualisation des données cognitives",
+        researchSample1: "Recherche: Modélisation cognitive avec réseaux de neurones",
+        researchSample2: "Article: Technologie et santé mentale",
+        researchSample3: "Projet: Analyse de données interdisciplinaires",
+        
+        // Portfolio descriptions
+        portfolioDesc: "Description complète de cet élément de portfolio. Ce projet comprenait divers aspects et a obtenu des résultats significatifs.",
+        psychologyDesc1: "Une recherche complète sur le traitement de l'information et la prise de décision dans le cerveau humain. Cette recherche comprend des études expérimentales et l'analyse des données en utilisant des méthodes statistiques avancées.",
+        psychologyDesc2: "Développement d'un modèle d'apprentissage automatique pour prédire le comportement humain basé sur des données psychologiques. Ce projet combine les connaissances psychologiques avec des techniques avancées d'informatique.",
+        psychologyDesc3: "Un projet analytique complet sur les données psychologiques en utilisant des méthodes statistiques et des techniques d'exploration de données. Ce projet comprend la visualisation des données et l'extraction de modèles significatifs.",
+        programmingDesc1: "Un système logiciel pour analyser le comportement des utilisateurs en utilisant des techniques d'apprentissage automatique et des principes psychologiques. Ce projet comprend le développement d'API et un tableau de bord analytique.",
+        programmingDesc2: "Développement d'une plateforme en ligne pour mener des expériences psychologiques et la collecte de données. Cette plateforme comprend une interface utilisateur interactive et un système de gestion des données.",
+        programmingDesc3: "Un outil logiciel pour visualiser et analyser les données liées aux performances cognitives. Ce projet utilise des bibliothèques avancées de visualisation de données.",
+        researchDesc1: "Une recherche complète sur l'utilisation de réseaux de neurones pour modéliser les processus cognitifs humains. Cette recherche comprend la conception expérimentale, la collecte de données et l'analyse en utilisant des méthodes avancées.",
+        researchDesc2: "Un article de recherche sur l'utilisation de la technologie pour améliorer la santé mentale. Cet article comprend une revue de la littérature, l'analyse des données et la présentation de solutions pratiques.",
+        researchDesc3: "Un grand projet analytique qui combine des données de plusieurs disciplines. Ce projet comprend l'utilisation de techniques d'exploration de données et d'apprentissage automatique pour découvrir des modèles complexes."
+    }
+};
+

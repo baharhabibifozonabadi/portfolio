@@ -1,0 +1,19 @@
+This project was conducted as part of the master’s thesis of Hossein Babaei, supervised by the Department of Literature at the University of Tehran, and represents an interdisciplinary collaboration between computational methods and Persian literary scholarship. The overarching goal was to develop a system capable of reading and analyzing Persian manuscripts in the classical Nastaʿlīq script, a script known for its intricate ligatures, calligraphic flourishes, and historical variations, which pose considerable challenges for textual transcription.
+
+My role in the project involved developing recognition techniques, curating textual corpora, and designing methodological protocols. The project began with a corpus of modern Persian texts to establish baseline transcription accuracy, and progressively included classical and historical manuscripts to address stylistic complexity and variations across time periods.
+
+In parallel, I collaborated closely with professors of Persian literature and manuscript studies, contributing to the development of diagnostic and analytical criteria for textual validation and literary analysis. These criteria enabled the system to not only produce accurate transcriptions but also compare multiple versions of the same historical work, identify discrepancies, and support the reconstruction of original manuscripts—a process that traditionally requires years of expert scholarly work.
+
+This work demonstrates a synergistic approach between computational techniques, literary scholarship, and manuscript studies. By integrating technical methods with humanities research, it provides a platform for the efficient study and preservation of Persian literary heritage. My contributions highlight active engagement in both technical implementation and literary-methodological design, reflecting the interdisciplinary nature of the project and its significance for advancing digital humanities research.
+
+Key Responsibilities and Workflow:
+
+Curated and structured textual corpora, from modern Persian texts to classical manuscripts.
+
+Developed transcription and recognition techniques for Nastaʿlīq manuscripts.
+
+Collaborated with faculty to define textual validation and literary analysis criteria.
+
+Designed protocols for comparing multiple manuscript versions and reconstructing originals.
+
+Coordinated interdisciplinary efforts, integrating computational methods with Persian literary scholarship.

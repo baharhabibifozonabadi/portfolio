@@ -1,0 +1,21 @@
+This project, conducted during 1399–1400, involved active collaboration with the PSYCHO psychology startup, with the goal of developing a comprehensive digital mental health education platform. The primary objective was to create a series of educational texts and videos, curated and structured within an algorithmic framework designed to deliver personalized learning experiences to users based on their individual needs and psychological profiles.
+
+My role in the project was content creation and media production, working closely under the supervision of a licensed psychologist. I authored educational texts and produced accompanying videos that translated complex psychological concepts into accessible, engaging formats suitable for a broad audience. These materials were designed to align with evidence-based psychological knowledge and pedagogical best practices, ensuring both accuracy and usability.
+
+The project was structured to complement monthly doctor appointments and therapy sessions, integrating digital learning with real-world therapeutic guidance. The algorithm was intended to adapt dynamically to the user’s progress and needs, providing targeted content for self-guided learning, skill development, and mental health support.
+
+Despite careful planning and production, the project encountered technical and organizational challenges, resulting in a halt before public launch. Nonetheless, the experience allowed me to combine applied psychological theory with digital content design, learning how to translate research-informed knowledge into engaging, multimedia educational products.
+
+Key Responsibilities and Workflow:
+
+Authored educational texts on psychological topics, designed for accessibility and engagement.
+
+Produced accompanying educational videos under psychologist supervision.
+
+Assisted in conceptualizing the algorithmic curation of content for personalized user experiences.
+
+Coordinated project planning with clinical staff and development teams to align content with therapeutic objectives.
+
+Contributed to a proof-of-concept platform integrating digital learning and mental health support.
+
+This project exemplifies my ability to translate theoretical psychological knowledge into practical, educational, and digitally delivered content, reflecting the interdisciplinary intersection of psychology, media production, and e-learning design.
