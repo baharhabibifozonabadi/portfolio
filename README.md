@@ -1,110 +1,67 @@
-# پورتفولیو - بهار
+# Portfolio Website - Bahar Habibi Fozonabadi
 
-وب‌سایت پورتفولیو و رزومه شخصی با طراحی مینیمال و حرفه‌ای، با تمرکز بر رویکرد میان‌رشته‌ای بین روان‌شناسی و علوم کامپیوتر.
+Personal portfolio website showcasing interdisciplinary work in theatre, writing, research, and programming.
 
-## ویژگی‌ها
+## Features
 
-- ✅ طراحی مینیمال و حرفه‌ای
-- ✅ ساختار چند صفحه‌ای
-- ✅ پشتیبانی کامل از زبان فارسی (RTL)
-- ✅ صفحات جداگانه برای هر تخصص:
-  - 🎭 تئاتر
-  - 🎨 هنر
-  - 🧠 روان‌شناسی
-  - 💻 برنامه‌نویسی
-  - 🔬 پژوهش
-- ✅ تاکید بر رویکرد میان‌رشته‌ای
-- ✅ قابلیت دانلود نمونه کارها
-- ✅ طراحی ریسپانسیو
-- ✅ انیمیشن‌های نرم و حرفه‌ای
+- ✅ Clean and professional design
+- ✅ Multi-page structure
+- ✅ Responsive design
+- ✅ Multiple sections:
+  - Theatrical Works & Stories
+  - Essays and Translations
+  - Programming & Computer Science
+  - Professional Experiences
+  - Startups & Research Collaborations
+  - Degrees & Certificates
+- ✅ Downloadable portfolio items
+- ✅ Smooth animations and transitions
 
-## ساختار فایل‌ها
+## GitHub Pages Deployment
+
+This site is configured for GitHub Pages. To deploy:
+
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" in the left sidebar
+3. Under "Source", select "Deploy from a branch"
+4. Choose "main" branch and "/ (root)" folder
+5. Click "Save"
+
+Your site will be available at: `https://baharhabibifozonabadi.github.io/portfolio/`
+
+## Local Development
+
+Simply open `index.html` in a web browser or use a local server:
+
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js (http-server)
+npx http-server
+```
+
+Then visit `http://localhost:8000`
+
+## Project Structure
 
 ```
 bahar_site/
-├── index.html          # صفحه اصلی
-├── theater.html        # صفحه تخصص تئاتر
-├── art.html            # صفحه تخصص هنر
-├── psychology.html     # صفحه تخصص روان‌شناسی
-├── programming.html    # صفحه تخصص برنامه‌نویسی
-├── research.html       # صفحه تخصص پژوهش
-├── styles.css          # استایل‌های CSS
-├── script.js           # کدهای JavaScript
-├── samples/            # پوشه نمونه کارها (فایل‌های قابل دانلود)
-└── README.md           # این فایل
+├── index.html                    # Main page
+├── stories.html                  # Theatrical Works & Stories
+├── essays.html                   # Essays and Translations
+├── programming.html              # Programming projects
+├── professional-experiences.html # Professional experiences
+├── startups.html                 # Startups & Research Collaborations
+├── degrees.html                  # Degrees & Certificates
+├── styles.css                    # Main stylesheet
+├── script.js                     # JavaScript functionality
+├── translations.js               # Translation data
+├── essays-pdfs/                  # Essay PDF files
+├── stories-pdfs/                 # Story PDF/DOCX files
+└── image_herosection.png         # Hero section image
 ```
 
-## نحوه استفاده
+## License
 
-1. **صفحه اصلی**: کاربر با ورود به سایت، اطلاعات کلی درباره شما را می‌بیند و می‌تواند تخصص مورد نظر را انتخاب کند.
-
-2. **صفحات تخصص**: با کلیک روی هر تخصص، صفحه جداگانه‌ای باز می‌شود که شامل:
-   - توضیحات درباره فعالیت‌های شما در آن زمینه
-   - لیست نمونه کارهای مربوطه
-   - امکان دانلود هر نمونه کار
-
-3. **فایل‌های نمونه کار**: فایل‌های نمونه کار خود را در پوشه `samples/` قرار دهید.
-
-4. **سفارشی‌سازی**: 
-   - اطلاعات شخصی (ایمیل) را در بخش تماس به‌روزرسانی کنید
-   - متن‌های توضیحات را با محتوای واقعی جایگزین کنید
-   - نام فایل‌ها را در قسمت `data-file` دکمه‌های دانلود به‌روزرسانی کنید
-
-## سفارشی‌سازی
-
-### تغییر رنگ‌ها
-در فایل `styles.css`، متغیرهای CSS در قسمت `:root` را تغییر دهید:
-
-```css
-:root {
-    --primary-color: #2563eb;
-    --primary-dark: #1e40af;
-    --secondary-color: #7c3aed;
-    /* ... */
-}
-```
-
-### افزودن نمونه کار جدید
-در هر صفحه تخصص (مثلاً `psychology.html`)، در بخش `portfolio-list` یک `portfolio-item-detailed` جدید اضافه کنید:
-
-```html
-<div class="portfolio-item-detailed">
-    <div class="portfolio-item-header">
-        <h3>عنوان نمونه کار</h3>
-        <span class="portfolio-year">۱۴۰۳</span>
-    </div>
-    <p class="portfolio-description">
-        توضیحات کامل درباره نمونه کار
-    </p>
-    <button class="btn-download" data-file="نام-فایل.pdf">دانلود فایل</button>
-</div>
-```
-
-### تغییر محتوای صفحات
-- متن‌های توضیحات در بخش `description-section` هر صفحه را ویرایش کنید
-- تاکید بر رویکرد میان‌رشته‌ای را در محتوا حفظ کنید
-
-## فلسفه طراحی
-
-این سایت با هدف نمایش رویکرد میان‌رشته‌ای طراحی شده است:
-- **مینیمالیسم**: طراحی تمیز و بدون عناصر اضافی
-- **حرفه‌ای بودن**: استفاده از تایپوگرافی و فاصله‌گذاری مناسب
-- **میان‌رشته‌ای**: تاکید بر ارتباط بین روان‌شناسی و علوم کامپیوتر در محتوا
-
-## پشتیبانی مرورگرها
-
-- Chrome (آخرین نسخه)
-- Firefox (آخرین نسخه)
-- Safari (آخرین نسخه)
-- Edge (آخرین نسخه)
-
-## نکات مهم
-
-- مطمئن شوید که فایل‌های نمونه کار در پوشه `samples/` قرار دارند
-- نام فایل‌ها در `data-file` باید دقیقاً با نام فایل‌های واقعی مطابقت داشته باشد
-- برای نمایش تصاویر واقعی، می‌توانید بخش `portfolio-image` را در صفحات تخصص اضافه کنید
-- لینک‌های ناوبری بین صفحات به درستی کار می‌کنند
-
-## لایسنس
-
-این پروژه برای استفاده شخصی است.
+Personal use only.
