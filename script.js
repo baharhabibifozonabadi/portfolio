@@ -14,6 +14,10 @@ function initLanguage() {
 function applyTranslations(lang) {
     const elements = document.querySelectorAll('[data-translate]');
     elements.forEach(element => {
+        // Skip typing elements - they will be handled by typing effect
+        if (element.classList.contains('typing') || element.id === 'heroTitle' || element.id === 'heroSubtitle' || element.id === 'heroDescription') {
+            return;
+        }
         const key = element.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
             if (element.tagName === 'INPUT' || element.tagName === 'BUTTON') {
@@ -46,7 +50,46 @@ if (langToggle) {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
+    // Clear hero text first to prepare for typing effect
+    const heroTitle = document.getElementById('heroTitle');
+    const heroSubtitle = document.getElementById('heroSubtitle');
+    const heroDescription = document.getElementById('heroDescription');
+    
+    if (heroTitle && heroSubtitle && heroDescription) {
+        // Clear text immediately
+        heroTitle.textContent = '';
+        heroSubtitle.textContent = '';
+        heroDescription.textContent = '';
+    }
+    
     initLanguage();
+    
+    // Initialize typing effect after language is set
+    setTimeout(() => {
+        if (heroTitle && heroSubtitle && heroDescription) {
+            // Get the text from translations or use default
+            const titleKey = heroTitle.getAttribute('data-translate');
+            const subtitleKey = heroSubtitle.getAttribute('data-translate');
+            const descriptionKey = heroDescription.getAttribute('data-translate');
+            
+            const titleText = translations[currentLang]?.[titleKey] || 'Bahar Habibi';
+            const subtitleText = translations[currentLang]?.[subtitleKey] || 'Theatre artist, writer, and researcher';
+            const descriptionText = translations[currentLang]?.[descriptionKey] || 'I study drama, language, and cognition while creating original plays and interdisciplinary projects that combine artistic practice with scientific research.';
+            
+            // Type title first
+            typeText(heroTitle, titleText, 80, () => {
+                // After title is done, type subtitle
+                setTimeout(() => {
+                    typeText(heroSubtitle, subtitleText, 60, () => {
+                        // After subtitle is done, type description
+                        setTimeout(() => {
+                            typeText(heroDescription, descriptionText, 40);
+                        }, 300);
+                    });
+                }, 300);
+            });
+        }
+    }, 600);
 });
 
 // Mobile Menu Toggle
@@ -341,3 +384,27 @@ portfolioItems.forEach((item, index) => {
     item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
     observer.observe(item);
 });
+
+// Typing Effect for Hero Section
+function typeText(element, text, speed = 100, callback) {
+    if (!element) return;
+    
+    element.textContent = '';
+    element.classList.add('typing');
+    
+    let i = 0;
+    const typeInterval = setInterval(() => {
+        if (i < text.length) {
+            element.textContent = text.substring(0, i + 1);
+            i++;
+        } else {
+            clearInterval(typeInterval);
+            // Remove cursor after typing is complete
+            setTimeout(() => {
+                element.classList.remove('typing');
+            }, 500);
+            if (callback) callback();
+        }
+    }, speed);
+}
+

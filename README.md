@@ -54,12 +54,24 @@ bahar_site/
 ├── professional-experiences.html # Professional experiences
 ├── startups.html                 # Startups & Research Collaborations
 ├── degrees.html                  # Degrees & Certificates
+├── cv.html                       # Complete CV
+├── art.html                      # Art projects
+├── research.html                 # Research projects
+├── psychology.html               # Psychology projects
+├── theater.html                  # Theater projects
 ├── styles.css                    # Main stylesheet
 ├── script.js                     # JavaScript functionality
 ├── translations.js               # Translation data
-├── essays-pdfs/                  # Essay PDF files
-├── stories-pdfs/                 # Story PDF/DOCX files
-└── image_herosection.png         # Hero section image
+├── site.webmanifest              # Web manifest
+├── assets/                        # All assets organized
+│   ├── images/                   # Images
+│   │   └── image_herosection.png
+│   ├── pdfs/                      # PDF documents
+│   │   ├── essays/               # Essay PDFs
+│   │   └── stories/               # Story PDFs/DOCX
+│   ├── certificates/              # Certificate PDFs
+│   └── python_project_zipfile/   # Python project ZIP files
+└── certificates-images/           # Certificate images (if any)
 ```
 
 ## License

@@ -37,7 +37,7 @@ const translations = {
         contactText: "For collaboration and inquiries, please contact me via email.",
         
         // Footer
-        footerText: "© 2024 Bahar Habibi Fozonabadi",
+        footerText: "© 2025 Bahar Habibi Fozonabadi",
         
         // Project Pages
         backToProjects: "← Back to Projects",
@@ -244,7 +244,7 @@ const translations = {
         contactText: "Pour la collaboration et les demandes, veuillez me contacter par email.",
         
         // Footer
-        footerText: "© 2024 Bahar Habibi Fozonabadi",
+        footerText: "© 2025 Bahar Habibi Fozonabadi",
         
         // Project Pages
         backToProjects: "← Retour aux Projets",
