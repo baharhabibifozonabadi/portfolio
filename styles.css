@@ -784,6 +784,17 @@ body {
     border-radius: 12px;
 }
 
+.in-progress-badge {
+    font-size: 0.75rem;
+    color: #f59e0b;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 4px 12px;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
 .portfolio-description {
     color: var(--text-medium);
     line-height: 1.8;
