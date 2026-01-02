@@ -229,7 +229,7 @@
 
                         <div class="portfolio-item-detailed">
                             <div class="portfolio-item-header">
-                                <h3>Collaboration in Applied Psychology: PSYCHO Startup</h3>
+                                <h3>Collaboration in Applied Psychology: pesiko Startup</h3>
                                 <button class="expand-toggle" aria-label="Expand content">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2">
@@ -246,7 +246,7 @@
                                     </svg>
                                 </div>
                                 <p>This project, conducted during 1399–1400, involved active collaboration with the
-                                    PSYCHO psychology startup, with the goal of developing a comprehensive digital
+                                    pesiko psychology startup, with the goal of developing a comprehensive digital
                                     mental health education platform. The primary objective was to create a series of
                                     educational texts and videos, curated and structured within an algorithmic framework
                                     designed to deliver personalized learning experiences to users based on their
@@ -291,12 +291,8 @@
                                     into practical, educational, and digitally delivered content, reflecting the
                                     interdisciplinary intersection of psychology, media production, and e-learning
                                     design.</p>
-
-                                <div class="portfolio-image">
-                                    <img src="https://via.placeholder.com/800x400/2563eb/ffffff?text=Project+Image"
-                                        alt="PSYCHO Startup Collaboration Project">
-                                </div>
                             </div>
+                            <a href="assets/pdfs/PESIKO.pdf" class="btn-download" target="_blank" rel="noopener noreferrer">View PDF →</a>
                         </div>
                     </div>
                 </div>
@@ -329,15 +325,17 @@
             const portfolioItems = document.querySelectorAll('.portfolio-item-detailed');
 
             portfolioItems.forEach(item => {
-                const header = item.querySelector('.portfolio-item-header');
                 const content = item.querySelector('.portfolio-content-collapsible');
                 const toggle = item.querySelector('.expand-toggle');
+                const downloadBtn = item.querySelector('.btn-download');
 
-                if (header && content && toggle) {
-                    // Toggle on header click
-                    header.addEventListener('click', function (e) {
-                        // Don't toggle if clicking directly on the button
-                        if (e.target.closest('.expand-toggle')) return;
+                if (content && toggle) {
+                    // Toggle on entire card click (except download button)
+                    item.addEventListener('click', function (e) {
+                        // Don't toggle if clicking on download button or expand toggle button
+                        if (e.target.closest('.btn-download') || e.target.closest('.expand-toggle')) {
+                            return;
+                        }
 
                         content.classList.toggle('expanded');
                         toggle.classList.toggle('expanded');
@@ -349,6 +347,13 @@
                         content.classList.toggle('expanded');
                         toggle.classList.toggle('expanded');
                     });
+
+                    // Prevent card click when clicking download button
+                    if (downloadBtn) {
+                        downloadBtn.addEventListener('click', function (e) {
+                            e.stopPropagation();
+                        });
+                    }
                 }
             });
         });

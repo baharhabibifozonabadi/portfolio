@@ -263,118 +263,27 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Carousel Functionality
-const carouselTrack = document.getElementById('carouselTrack');
-const carouselPrev = document.getElementById('carouselPrev');
-const carouselNext = document.getElementById('carouselNext');
-const carouselDots = document.getElementById('carouselDots');
-const slides = document.querySelectorAll('.carousel-slide');
-
-let currentSlide = 0;
-const totalSlides = slides.length;
-
-// Create dots
-if (carouselDots && slides.length > 0) {
-    slides.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.classList.add('carousel-dot');
-        if (index === 0) dot.classList.add('active');
-        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-        dot.addEventListener('click', () => goToSlide(index));
-        carouselDots.appendChild(dot);
+// Projects Grid Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        
+        // Use Intersection Observer for fade-in
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        cardObserver.observe(card);
     });
-}
-
-function updateCarousel() {
-    if (carouselTrack) {
-        carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-    
-    // Update dots
-    const dots = document.querySelectorAll('.carousel-dot');
-    dots.forEach((dot, index) => {
-        if (index === currentSlide) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
-    });
-}
-
-function goToSlide(index) {
-    currentSlide = index;
-    if (currentSlide < 0) currentSlide = totalSlides - 1;
-    if (currentSlide >= totalSlides) currentSlide = 0;
-    updateCarousel();
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
-}
-
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-}
-
-if (carouselNext) {
-    carouselNext.addEventListener('click', nextSlide);
-}
-
-if (carouselPrev) {
-    carouselPrev.addEventListener('click', prevSlide);
-}
-
-// Auto-play carousel (optional - can be disabled)
-let autoPlayInterval;
-function startAutoPlay() {
-    autoPlayInterval = setInterval(nextSlide, 5000);
-}
-
-function stopAutoPlay() {
-    clearInterval(autoPlayInterval);
-}
-
-// Start auto-play when page loads
-if (slides.length > 0) {
-    startAutoPlay();
-    
-    // Pause on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-        carouselContainer.addEventListener('mouseleave', startAutoPlay);
-    }
-}
-
-// Touch/swipe support for mobile
-let touchStartX = 0;
-let touchEndX = 0;
-
-if (carouselTrack) {
-    carouselTrack.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    carouselTrack.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, { passive: true });
-}
-
-function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-    
-    if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-            nextSlide();
-        } else {
-            prevSlide();
-        }
-    }
-}
+});
 
 // Observe portfolio items
 const portfolioItems = document.querySelectorAll('.portfolio-item-detailed');
